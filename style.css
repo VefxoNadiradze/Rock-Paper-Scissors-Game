@@ -48,9 +48,10 @@ body {
 
 .player-computer img {
   height: 200px;
+  transition: 0.3s ease;
 }
 
-.player {
+.playerImg {
   transform: rotateY(180deg);
 }
 
@@ -68,4 +69,11 @@ button {
   color: white;
   border: none;
   border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: #27675b;
 }
