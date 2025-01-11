@@ -49,10 +49,37 @@ body {
 .player-computer img {
   height: 200px;
   transition: 0.3s ease;
+  animation: ImgAnimate 1s ease-in-out infinite;
+}
+.player-computer .playerImg {
+  transform: rotateY(180deg) translateY(0);
+  animation: PlayerAnimate 1s ease-in-out infinite;
+}
+@keyframes PlayerAnimate {
+  0% {
+    transform: rotateY(180deg) translateY(0);
+  }
+  50% {
+    transform: rotateY(180deg) translateY(15px);
+  }
+  100% {
+    transform: rotateY(180deg) translateY(0);
+  }
 }
 
-.playerImg {
-  transform: rotateY(180deg);
+.player-computer .computerImg {
+  animation: ComputerAnimate 1s ease-in-out infinite;
+}
+@keyframes ComputerAnimate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .buttonsParent {
