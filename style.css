@@ -7,4 +7,65 @@
 body {
   background-color: #262a45;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  align-items: center;
+}
+
+.GameContainer {
+  width: 70%;
+  color: white;
+}
+
+.player-computerTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.player-computerTitle h3 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.player-computerTitle h3 span {
+  margin-top: 10px;
+}
+
+.winner {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.player-computer {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.player-computer img {
+  height: 200px;
+}
+
+.player {
+  transform: rotateY(180deg);
+}
+
+.buttonsParent {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  font-size: 17px;
+  padding: 8px 13px;
+  cursor: pointer;
+  background-color: #27675b;
+  color: white;
+  border: none;
+  border-radius: 5px;
 }
