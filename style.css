@@ -104,3 +104,13 @@ button:hover {
   background-color: white;
   color: #27675b;
 }
+
+.clickedOption {
+  background-color: lawngreen;
+  color: black;
+}
+
+.clickedOption:hover {
+  background-color: red;
+  transform: scale(1);
+}
