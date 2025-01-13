@@ -14,6 +14,7 @@ body {
 }
 
 .GameContainer {
+  position: relative;
   width: 70%;
   color: white;
 }
@@ -88,7 +89,7 @@ body {
   justify-content: space-around;
 }
 
-button {
+.buttonsParent button {
   font-size: 17px;
   padding: 8px 13px;
   cursor: pointer;
@@ -99,7 +100,7 @@ button {
   transition: 0.3s ease;
 }
 
-button:hover {
+.buttonsParent button:hover {
   transform: scale(1.1);
   background-color: white;
   color: #27675b;
@@ -143,4 +144,27 @@ button:hover {
   100% {
     transform: translateY(0);
   }
+}
+
+.Restart {
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  transform: translateX(-59%);
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: greenyellow;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease;
+  display: none;
+}
+
+.Restart:hover {
+  transform: translateX(-59%) scale(1.1);
+}
+.ActiveRestart {
+  display: block;
 }

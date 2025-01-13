@@ -5,6 +5,7 @@ const playerImg = document.querySelector(".playerImg");
 const computerImg = document.querySelector(".computerImg");
 const roundEl = document.querySelector(".round");
 const winnerEl = document.querySelector(".winner");
+const restartBtn = document.querySelector(".Restart");
 let playerScore = 0;
 let computerScore = 0;
 let round = 1;
@@ -19,6 +20,7 @@ const computerOptions = ["Rock", "Paper", "Scissor"];
 initianGame();
 function initianGame() {
   optionBtns.map((option) => option.addEventListener("click", clickOptions));
+  restartBtn.addEventListener("click", RestartFunction);
   playerScoreEl.innerText = playerScore;
   computerScoreEl.innerText = computerScore;
   roundEl.innerText = round;
@@ -99,6 +101,7 @@ function clickOptions() {
     }
     if (round === 5) {
       winnerFunction(round);
+      restartBtn.classList.add("ActiveRestart");
     }
   }, 1000);
 }
@@ -111,4 +114,17 @@ function winnerFunction(round) {
   } else {
     winnerEl.innerText = `draw`;
   }
+}
+
+function RestartFunction() {
+  round = 1;
+  playerScore = 0;
+  computerScore = 0;
+  playerImg.src = images[0];
+  computerImg.src = images[0];
+  playerScoreEl.innerText = playerScore;
+  computerScoreEl.innerText = computerScore;
+  roundEl.innerText = round;
+  winnerEl.innerText = "";
+  restartBtn.classList.remove("ActiveRestart");
 }
