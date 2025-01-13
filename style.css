@@ -168,3 +168,80 @@ body {
 .ActiveRestart {
   display: block;
 }
+
+@media screen and (max-width: 890px) {
+  .GameContainer {
+    width: 75%;
+  }
+
+  .player-computer img {
+    height: 170px;
+  }
+
+  .player-computerTitle {
+    font-size: 14px;
+  }
+
+  .winner {
+    margin-top: 30px;
+    font-size: 17px;
+  }
+
+  .buttonsParent button {
+    font-size: 15px;
+  }
+
+  .Restart {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .player-computer img {
+    height: 135px;
+  }
+
+  .buttonsParent {
+    margin-top: 20px;
+  }
+
+  .buttonsParent button {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+
+  .player-computerTitle {
+    font-size: 13px;
+  }
+
+  .winner {
+    font-size: 15px;
+  }
+
+  .Restart {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .player-computer img {
+    height: 100px;
+  }
+
+  .player-computerTitle {
+    flex-wrap: wrap;
+    gap: 13px;
+    text-align: center;
+  }
+  .buttonsParent {
+    flex-wrap: wrap;
+    gap: 11px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .player-computer img {
+    height: 80px;
+  }
+}
