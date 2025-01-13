@@ -35,13 +35,18 @@ function clickOptions() {
   ) {
     return;
   }
-
+  if (round > 5) {
+    return;
+  }
   setTimeout(() => {
+    round += 1;
     isChoosing = false;
   }, 2000);
 
+  roundEl.innerText = round;
+
   isChoosing = true;
-  let clickedOption = this.classList.add("clickedOption");
+  this.classList.add("clickedOption");
 
   playerImg.classList.add("PlayeranimateImg");
   computerImg.classList.add("ComputeranimateImg");
@@ -65,7 +70,7 @@ function clickOptions() {
     computerImg.src = images[computerImgIndex];
     let computerOption = computerOptions[computerImgIndex];
 
-    if (round <= 10) {
+    if (round <= 5) {
       if (this.innerText == "Rock" && computerOption == "Scissor") {
         winnerEl.innerText = `Round ${round} was won by the player.`;
 
@@ -87,18 +92,23 @@ function clickOptions() {
         computerScore += 1;
       } else if (this.innerText == computerOption) {
         winnerEl.innerText = `Round ${round} was a draw.`;
-      } else {
-        // Player wins - already handled above
       }
 
       playerScoreEl.innerText = playerScore;
       computerScoreEl.innerText = computerScore;
     }
+    if (round === 5) {
+      winnerFunction(round);
+    }
   }, 1000);
-
-  changePlayer(clickedOption);
 }
 
-function changePlayer(clickedOption) {}
-
-function winnerFunction() {}
+function winnerFunction(round) {
+  if (playerScore > computerScore) {
+    winnerEl.innerText = `winner is Player`;
+  } else if (computerScore > playerScore) {
+    winnerEl.innerText = `winner is Computer`;
+  } else {
+    winnerEl.innerText = `draw`;
+  }
+}
